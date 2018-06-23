@@ -4,13 +4,9 @@ public class PointTask
 {
   public static void main(String[] args)
   {
-    double x1 = 32;
-    double x2 = 59;
-    double y1 = 41;
-    double y2 = 82;
-
-    Point p1 = new Point (x1, y1);
-    Point p2 = new Point (x2, y2);
+   
+    Point p1 = new Point (32, 41);
+    Point p2 = new Point (59, 82);
 
     System.out.println (distance(p1, p2));
     System.out.println (p1.distance(p2));
