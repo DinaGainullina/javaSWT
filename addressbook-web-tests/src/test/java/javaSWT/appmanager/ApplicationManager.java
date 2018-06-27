@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-
   FirefoxDriver wd;
 
   private ContactHelper contactHelper;
@@ -43,5 +42,5 @@ public class ApplicationManager {
 
   public ContactHelper getContactHelper() {  return contactHelper;  }
 
-
+  public SessionHelper getSessionHelperHelper() {  return sessionHelper;  }
 }
