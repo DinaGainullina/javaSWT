@@ -1,4 +1,4 @@
-package javaSWT;
+package javaSWT.model;
 
 public class GroupData {
   private final String name;
