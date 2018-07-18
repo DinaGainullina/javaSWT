@@ -2,12 +2,14 @@ package javaSWT.appmanager;
 
 import javaSWT.model.ContactData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 public class ContactHelper extends HelperBase {
 
 
-  public ContactHelper(FirefoxDriver wd) { super (wd);  }
+  public ContactHelper(WebDriver wd) { super (wd);  }
 
   public void submitContactCreation() {
       click (By.xpath("//div[@id='content']/form/input[21]"));

@@ -16,7 +16,7 @@ public class Equation {
 
     double d = b * b - 4 * a * c;
 
-    if (a == 0) {
+ if (a == 0) {
       if (b == 0) {
         if (c == 0) {
           n = -1;
