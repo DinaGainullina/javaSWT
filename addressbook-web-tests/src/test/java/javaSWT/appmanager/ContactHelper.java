@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class ContactHelper extends HelperBase {
 
@@ -18,7 +19,7 @@ public class ContactHelper extends HelperBase {
 
   }
 
-  public void fillContactForm(ContactData contactData) {
+  public void fillContactForm(ContactData contactData, boolean creation) {
     type(By.name("lastname"), contactData.getLastName());
     type(By.name("firstname"), contactData.getFirstName());
     type(By.name("address"), contactData.getAddress());
@@ -31,9 +32,14 @@ public class ContactHelper extends HelperBase {
     type(By.name("work"), contactData.getWork());
     type(By.name("fax"), contactData.getFax());
 
-    if (isElementPresent(By.name("new_group"))) {
+   if (creation) {
+
+    //if (isElementPresent(By.name("new_group"))) {
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
     }
+    else {
+     Assert.assertFalse(isElementPresent(By.name("new_group")));
+   }
   }
 
   public void deleteSelectedContact() {
